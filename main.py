@@ -72,6 +72,8 @@ api = SMSVerification('Token')
 balance = api.get_user_balance()["data"]["balance"]  # getting the user balance (float)
 phone_price = api.get_disposable_price("Russia", "ProtonMail")["data"]["phone"][
     "price"]  # getting the phone price (float)
+order_number = api.order_disposable_number("Russia", "Telegram")["data"]["phone"]
 
 print(balance)
 print(phone_price)
+print(order_number)
